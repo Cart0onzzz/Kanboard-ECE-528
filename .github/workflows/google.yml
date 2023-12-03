@@ -42,7 +42,7 @@ jobs:
 
     # Alternative option - authentication via credentials json
     - id: 'auth'
-      uses: 'google-github-actions/auth@v0'
+      uses: 'google-github-actions/auth@v1'
       with:
         credentials_json: '${{ secrets.GKE_SA_KEY }}'
 
@@ -65,7 +65,6 @@ jobs:
     - name: Build
       run: |-
         make docker-image GITHUB_SHA=$GITHUB_SHA GITHUB_REF=$GITHUB_REF PROJECT_ID=$PROJECT_ID IMAGE=$IMAGE
-          .
 
 
     # Push the Docker image to Google Container Registry
