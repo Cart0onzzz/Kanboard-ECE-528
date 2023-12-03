@@ -19,7 +19,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GAR_LOCATION: us-central1
-  GKE_CLUSTER: prod
+  GKE_CLUSTER: 	//container.googleapis.com/projects/${{ secrets.GKE_PROJECT }}/clusters/prod
   GKE_ZONE: us-central1
   DEPLOYMENT_NAME: kanboard-deployment
   IMAGE: static-site
