@@ -68,7 +68,7 @@ jobs:
                 --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
                 --build-arg GITHUB_SHA="$GITHUB_SHA" \
                 --build-arg GITHUB_REF="$GITHUB_REF" \
-                .
+                ./kanboard
         # make docker-image GITHUB_SHA=$GITHUB_SHA GITHUB_REF=$GITHUB_REF PROJECT_ID=$PROJECT_ID IMAGE=$IMAGE
 
 
