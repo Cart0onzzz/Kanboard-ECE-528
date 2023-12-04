@@ -22,19 +22,15 @@ spec:
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: kanboard-deployment
   minReadySeconds: 5
   template:
     metadata:
       labels:
         app: kanboard-deployment
     spec:
-      selector:
-        matchLabels:
-          app: kanboard-deployment
-      template:
-        metadata:
-          labels:
-            app: kanboard-deployment
       containers:
       - name: kanboard-deployment
         image: gcr.io/PROJECT_ID/IMAGE:TAG
