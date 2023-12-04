@@ -22,4 +22,4 @@ spec:
     - port: 80
       targetPort: 80
   selector:
-    app: gke-test
+    app: kanboard-deployment
