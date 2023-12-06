@@ -1553,7 +1553,7 @@ function version_1(PDO $pdo)
     $pdo->exec("
         INSERT INTO users
         (username, password, is_admin)
-        VALUES ('admin', '".\password_hash('admin', PASSWORD_BCRYPT)."', '1')
+        VALUES ('admin', '".\password_hash('dearborn', PASSWORD_BCRYPT)."', '1')
     ");
 
     $pdo->exec("
