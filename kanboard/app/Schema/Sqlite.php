@@ -1563,6 +1563,12 @@ function version_1(PDO $pdo)
     ");
 
     $pdo->exec("
+        INSERT INTO users
+        (username, password, is_admin)
+        VALUES ('test_user2', '".\password_hash('cloud_computing_2', PASSWORD_BCRYPT)."', '0')
+    ");
+
+    $pdo->exec("
         INSERT INTO config
         (webhooks_token)
         VALUES ('".Token::getToken()."')
