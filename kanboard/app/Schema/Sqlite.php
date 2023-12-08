@@ -1569,6 +1569,12 @@ function version_1(PDO $pdo)
     ");
 
     $pdo->exec("
+        INSERT INTO users
+        (username, password, is_admin)
+        VALUES ('jake', '".\password_hash('password', PASSWORD_BCRYPT)."', '1')
+    ");
+	
+    $pdo->exec("
         INSERT INTO config
         (webhooks_token)
         VALUES ('".Token::getToken()."')
